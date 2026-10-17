@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Pieces of Us 💗</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 35px 15px;
+            min-height: 100vh;
+            text-align: center;
+            font-family: "Trebuchet MS", sans-serif;
+            background: linear-gradient(135deg, #ffe4ee, #fff5f8, #fbd4e5);
+            color: #c43c70;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 7vw, 3rem);
+            animation: appear 1s ease;
+        }
+
+        .intro {
+            color: #97506d;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin: 35px auto;
+            max-width: 950px;
+        }
+
+        .polaroid {
+            width: 250px;
+            padding: 12px 12px 22px;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 7px 20px #c56e9633;
+            transform: rotate(-2deg);
+            transition: transform 0.3s;
+            animation: appear 1s ease;
+        }
+
+        .polaroid:nth-child(even) {
+            transform: rotate(2deg);
+        }
+
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+
+        .photo {
+            height: 250px;
+            width: 100%;
+            background: #ffe3ef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            overflow: hidden;
+        }
+
+        .photo img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .caption {
+            margin: 16px 0 0;
+            font-size: 16px;
+            color: #a0446d;
+        }
+
+        button {
+            margin: 20px 0 35px;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 30px;
+            background: #ed77a6;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #d9578c;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            color: #c86b91;
+            font-size: 20px;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Little Pieces of Us 💗</h1>
+
+    <p class="intro">
+        Some moments become memories,<br>
+        and some people become your favourite part of life. 🥹
+    </p>
+
+    <div class="gallery">
+
+        <div class="polaroid">
+            <div class="photo">
+                <img src="C:\Users\Zoya Ar\Desktop\bt\photo1.png\WhatsApp Image 2026-10-17 at 2.03.44 PM.jpeg"
+                     alt="Our favourite memory"
+                     onerror="this.style.display='none'; this.parentElement.innerHTML='📸💗';">
+            </div>
+            <p class="caption">My favourite person. ❤️</p>
+        </div>
+
+        <div class="polaroid">
+            <div class="photo">
+                <img src="C:\Users\Zoya Ar\Desktop\bt\photo2.png\WhatsApp Image 2026-10-17 at 2.03.43 PM.jpeg
+                "
+                     alt="A special memory"
+                     onerror="this.style.display='none'; this.parentElement.innerHTML='🧸💕';">
+            </div>
+            <p class="caption">A memory I'll always keep. ✨</p>
+        </div>
+
+        <div class="polaroid">
+            <div class="photo">
+                <img src="C:\Users\Zoya Ar\Desktop\bt\photo3.png\WhatsApp Image 2026-10-17 at 2.03.43 PM (1).jpeg"
+                     alt="A precious moment"
+                     onerror="this.style.display='none'; this.parentElement.innerHTML='💌🌷';">
+            </div>
+            <p class="caption">You make ordinary days special. 💗</p>
+        </div>
+
+    </div>
+
+    <p class="intro">
+        And these are just a few little pieces of our story... 💌
+    </p>
+
+    <p class="footer">But wait, there's more! 👀</p>
+
+    <button onclick="window.location.href='page4.html'">
+        There's More → 🎁
+    </button>
+
+</body>
+</html>

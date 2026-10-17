@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Final Surprise 💌</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: "Trebuchet MS", sans-serif;
+            background: linear-gradient(135deg, #ffe1ec, #fff5f8, #f4c9df);
+            color: #c43c70;
+            overflow: hidden;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 560px;
+            padding: 35px 25px;
+            background: rgba(255, 255, 255, 0.78);
+            border: 2px solid white;
+            border-radius: 30px;
+            box-shadow: 0 12px 35px #d88aaa44;
+            animation: appear 1.2s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .gift {
+            font-size: 100px;
+            cursor: pointer;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 7vw, 3rem);
+            margin: 15px 0;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #97506d;
+        }
+
+        .time {
+            font-size: clamp(25px, 6vw, 34px);
+            font-weight: bold;
+            color: #d43d7c;
+            margin: 20px 0;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: -40px;
+            animation: rise 7s linear infinite;
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        @keyframes appear {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes rise {
+            from { transform: translateY(0); opacity: 0; }
+            20% { opacity: 0.8; }
+            to { transform: translateY(-110vh); opacity: 0; }
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 13px 27px;
+            border: none;
+            border-radius: 30px;
+            background: #ed77a6;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #d9578c;
+            transform: scale(1.06);
+        }
+
+        .small {
+            font-size: 14px;
+            color: #bb7291;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="card">
+
+        <div class="gift">🎁</div>
+
+        <h1>One Last Little Surprise 💗</h1>
+
+        <p>
+            Well, birthday boy... that's all you're getting
+            from this website for now. 👀
+        </p>
+
+        <p>
+            If you really want to know your surprise,
+            there's just one thing you have to do...
+        </p>
+
+        <div class="time">
+            Meet me at 7:40 AM sharp ⏰
+        </div>
+
+        <p>
+            To find out your surprise. 🤍
+        </p>
+
+        <p>
+            Don't be late, okay? 🎀
+        </p>
+
+        <p class="small">
+            See you soon. 💌
+        </p>
+
+        <button onclick="showLove()">
+            One Last Thing 💕
+        </button>
+
+        <p id="loveMessage" style="display:none;">
+            Just come with a smile. That's all I ask. 🥹❤️
+        </p>
+
+    </main>
+
+    <script>
+        function showLove() {
+            const message = document.getElementById("loveMessage");
+            message.style.display = "block";
+        }
+
+        const hearts = ["💗", "💕", "♡", "✨", "💖"];
+
+        for (let i = 0; i < 18; i++) {
+            const heart = document.createElement("div");
+
+            heart.className = "heart";
+            heart.textContent =
+                hearts[Math.floor(Math.random() * hearts.length)];
+
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDelay = Math.random() * 7 + "s";
+            heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+            heart.style.fontSize = (18 + Math.random() * 18) + "px";
+
+            document.body.appendChild(heart);
+        }
+    </script>
+
+</body>
+</html>

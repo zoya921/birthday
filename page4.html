@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready for the Surprise? 🎁</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: "Trebuchet MS", sans-serif;
+            background: linear-gradient(135deg, #ffe1ec, #fff5f8, #f6cde1);
+            color: #c43c70;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 600px;
+            padding: 35px 25px;
+            background: rgba(255, 255, 255, 0.7);
+            border: 2px solid white;
+            border-radius: 30px;
+            box-shadow: 0 10px 35px #d88aaa44;
+            animation: appear 1s ease;
+        }
+
+        .gift {
+            font-size: 100px;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 7vw, 3.2rem);
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #97506d;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            background: #ed77a6;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.07);
+            background: #d9578c;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #surprise {
+            margin-top: 25px;
+            padding: 20px;
+            background: #fff0f6;
+            border-radius: 20px;
+            animation: appear 1s ease;
+        }
+
+        .time {
+            font-size: 27px;
+            font-weight: bold;
+            color: #d33d7b;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="card">
+
+        <div class="gift">🎁</div>
+
+        <h1>Ready for the Surprise?</h1>
+
+        <p>
+            You didn't think that was all, did you? 👀
+        </p>
+
+        <p>
+            I have one tiny little surprise for you...
+            but there's just one thing you need to know first. 💌
+        </p>
+
+        <button onclick="revealSurprise()">
+            Okay, Tell Me! 💗
+        </button>
+
+        <div id="surprise" class="hidden">
+
+            <h2>I Have a Tiny Little Surprise for You 🤍</h2>
+
+            <p>
+                I have a tiny little surprise for you.
+                For that, I need you to be there at
+            </p>
+
+            <p class="time">7:40 AM SHARP ⏰</p>
+
+            <p>
+                No being late, okay? See you there,
+                birthday boy. 💌
+            </p>
+
+            <p>💕 🎀 💕</p>
+
+        </div>
+
+    </main>
+
+    <script>
+        function revealSurprise() {
+            document.getElementById("surprise").classList.remove("hidden");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Much I Love You? 💗</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: "Trebuchet MS", sans-serif;
+            background: linear-gradient(135deg, #ffe1ec, #fff5f8, #f8d4e7);
+            color: #c43c70;
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 600px;
+            padding: 35px 22px;
+            background: rgba(255, 255, 255, 0.65);
+            border: 2px solid white;
+            border-radius: 30px;
+            box-shadow: 0 10px 35px #e8a6c455;
+            animation: appear 1.2s ease;
+        }
+
+        .heart {
+            font-size: 85px;
+            animation: heartbeat 1.2s infinite;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 7vw, 3rem);
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 18px;
+            color: #97506d;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 30px;
+            background: #ed77a6;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.06);
+            background: #d9578c;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #message {
+            margin-top: 25px;
+            animation: appear 1s ease;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        @keyframes appear {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="card">
+        <div class="heart">💗</div>
+
+        <h1>How Much I Love You?</h1>
+
+        <p>
+            Do you really think words could ever explain
+            how much you mean to me?
+        </p>
+
+        <p>Well, let's see if I can even try... 🥹</p>
+
+        <button onclick="revealLove()">Click to Reveal 💌</button>
+
+        <div id="message" class="hidden">
+            <h2>More than you could ever imagine. ♾️</h2>
+
+            <p>
+                If I could give you one thing in life,
+                I would give you the ability to see yourself
+                through my eyes. Then you'd know how special
+                you truly are to me. ❤️
+            </p>
+
+            <a href="page3.html" style="text-decoration: none;">
+                <button type="button">A Little More About Us →</button>
+            </a>
+        </div>
+    </main>
+
+    <script>
+        function revealLove() {
+            document.getElementById("message").classList.remove("hidden");
+        }
+    </script>
+
+</body>
+</html>
